@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conciencia y Salud - Formulario</title>
+    <link rel="stylesheet" href="estilos/general.css">
+    <link rel="stylesheet" href="estilos/formulario.css">
+</head>
+<body>
+    <header>
+        &#9764; Conciencia y Salud
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="formulario.html" class="activo">Formulario de Vacunación</a>
+        <a href="informacion.html">Información Médica</a>
+        <a href="acerca.html">Acerca de Nosotros</a>
+    </nav>
+
+    <main>
+        <div class="aviso">
+            &#9888; Fechas disponibles: 7, 8 y 10 de marzo de 2026. ¡Agenda tu cita ahora!
+        </div>
+
+        <div class="contenedor-form">
+            <form action="">
+                <fieldset>
+                    <legend>Agendar Cita de Vacunación</legend>
+
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre"
+                        pattern="[A-Za-záéíóúÁÉÍÓÚñÑ ]{3,60}"
+                        title="Solo letras y espacios, entre 3 y 60 caracteres"
+                        placeholder="Nombre(s) y Apellidos"
+                        required>
+
+                    <label for="clave.pob">CURP:</label>
+                    <input type="text" id="curp"
+                        pattern="[A-Z]{4}[0-9]{6}[HM][A-Z]{5}[A-Z0-9]{2}"
+                        title="Formato de CURP válido (18 caracteres en mayúsculas)"
+                        placeholder="XXXX000000XXXXXX00"
+                        required>
+
+                    <label for="matricula">Matrícula universitaria:</label>
+                    <input type="text" id="matricula"
+                        pattern="[A-Z]{2}[0-9]{4}"
+                        title="Formato: AB1234 (2 mayúsculas y 4 números)"
+                        placeholder="AB1234"
+                        required>
+
+                    <label for="carrera">Carrera:</label>
+                    <input type="text" id="carrera"
+                        pattern="[A-Za-záéíóúÁÉÍÓÚñÑ ]{3,50}"
+                        title="Solo letras, entre 3 y 50 caracteres"
+                        placeholder="Ingeniería en Sistemas, Medicina, etc."
+                        required>
+
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad"
+                        min="17" max="65"
+                        title="Edad entre 17 y 65 años"
+                        placeholder="Edad"
+                        required>
+
+                    <label for="correo">Correo universitario:</label>
+                    <input type="email" id="correo"
+                        pattern=".+@universidad\.edu"
+                        title="Usa tu correo institucional que termine en @universidad.edu"
+                        placeholder="usuario@universidad.edu"
+                        required>
+
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" id="direccion"
+                        pattern=".{10,100}"
+                        title="La dirección debe tener entre 10 y 100 caracteres"
+                        placeholder="Calle, número, colonia, ciudad"
+                        required>
+
+                    <label for="sede">Sede:</label>
+                    <select id="sede" required>
+                        <option value="">-- Selecciona una sede --</option>
+                        <option value="cu">Ciudad Universitaria</option>
+                        <option value="ccu">Complejo Cultural Universitario</option>
+                        <option value="cu2">Ciudad Universitaria 2</option>
+                    </select>
+
+                    <label for="fecha">Fecha de la cita:</label>
+                    <select id="fecha" required>
+                        <option value="">-- Selecciona una fecha --</option>
+                        <option value="2026-03-01">1 de marzo de 2026</option>
+                        <option value="2026-03-02">2 de marzo de 2026</option>
+                        <option value="2026-03-03">3 de marzo de 2026</option>
+                    </select>
+
+                    <label for="horario">Horario:</label>
+                    <select id="horario" required>
+                        <option value="">-- Selecciona un horario --</option>
+                        <option value="9:00">9:00 AM - 11:00 AM</option>
+                        <option value="12:00">12:00 PM - 2:00 PM</option>
+                        <option value="15:00">3:00 PM - 5:00 PM</option>
+                    </select>
+
+                    <div class="botones">
+                        <input type="reset" value="Limpiar">
+                        <input type="submit" value="Agendar Cita">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <strong>Conciencia y Salud - Campaña de Vacunación contra el Sarampión</strong>
+        <br>
+        Creado por: Abraham Polvo, Ricardo Gonzales, Eber Flores y Eduardo Monfil
+        <br>
+        Tel: 222-555-0101 | Correo: <a href="mailto:contacto@concienciaysalud.org">contacto@concienciaysalud.org</a>
+    </footer>
+</body>
+</html>
